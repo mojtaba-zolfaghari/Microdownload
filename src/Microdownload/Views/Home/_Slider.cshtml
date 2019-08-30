@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+<section id="slider" class="slider-element swiper_wrapper clearfix">
+
+    <div class="slider-parallax-inner">
+
+        <div class="swiper-container swiper-parent">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model)
+                {
+                    <img src="@item" class="swiper-slide" />
+                }
+            </div>
+            <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+            <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+        </div>
+
+    </div>
+
+</section>

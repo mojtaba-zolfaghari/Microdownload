@@ -1,0 +1,68 @@
+﻿@model IEnumerable<TeacherRequestViewModel>
+
+    @{
+    ViewData["Title"] = "درخواست های تدریس";
+    }
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="panel-title">@ViewData["Title"]</h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="btn-group pull-right">
+                        <a asp-action="CreateTeacherRequest" class="btn btn-success" id="btnCreateNew"><i class="fa fancytree-ico-c"> </i> ثبت درخواست تدریس</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="panel-body">
+
+            @(Html
+                                                                              .Grid(Model)
+                                                                              .Build(columns =>
+                                                                              {
+                                                                                  columns.Add(model => model.User.DisplayName).Titled("نام");
+                                                                                  columns.Add(model => model.User.PhoneNumber).Titled("تلفن");
+                                                                                  columns.Add(model => model.User.UserName).Titled("نام کاربری");
+                                                                                  columns.Add(model => model.User.Email).Titled("ایمیل");
+                                                                                  columns.Add(model => model.RequestedLesson).Titled("دوره های درخواستی");
+
+                                                                                  columns.Add(model =>
+
+                     $"<a  href=\"Institute/teacherrequest/{model.Id} \" class=\"btn btn-sm btn-primary\" style=\"margin-left:10px\">عملکرد</a>").Encoded(false);
+
+                                                                              })
+                                                                                    .Empty("درخواستی ای یافت نشد")
+                                                                                    .Filterable()
+                                                                                    .Sortable()
+                                                                                    .Pageable(pager =>
+                                                                                    {
+                                                                                        pager.ProcessorType = GridProcessorType.Manual;
+                                                                                        pager.TotalRows = ViewBag.TotalRows;
+                                                                                        pager.RowsPerPage = 10;
+                                                                                    })
+            )
+
+
+        </div>
+
+
+
+        <div class="panel-footer">
+            تعداد کل درخواست ها : @Model.Count()
+        </div>
+
+
+    </div>
+
+
+
+    @section Scripts
+    {
+        <script src="~/server/assets/js/core/MvcGrid.js"></script>
+
+    }

@@ -1,0 +1,14 @@
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\bin\Debug\netstandard2.0\Katebb.ViewModels.deps.json
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\bin\Debug\netstandard2.0\Katebb.ViewModels.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\bin\Debug\netstandard2.0\Katebb.ViewModels.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\bin\Debug\netstandard2.0\Katebb.Common.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\bin\Debug\netstandard2.0\Katebb.Entities.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\bin\Debug\netstandard2.0\Katebb.Entities.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\bin\Debug\netstandard2.0\Katebb.Common.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\obj\Debug\netstandard2.0\Katebb.ViewModels.csprojResolveAssemblyReference.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\obj\Debug\netstandard2.0\Katebb.ViewModels.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\obj\Debug\netstandard2.0\Katebb.ViewModels.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\obj\Debug\netstandard2.0\Katebb.ViewModels.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\obj\Debug\netstandard2.0\Katebb.ViewModels.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\obj\Debug\netstandard2.0\Katebb.ViewModels.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.ViewModels\obj\Debug\netstandard2.0\Katebb.ViewModels.csproj.CopyComplete

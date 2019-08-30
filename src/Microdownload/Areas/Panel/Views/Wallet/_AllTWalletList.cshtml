@@ -1,0 +1,44 @@
+﻿@model PagingViewModel<WalletViewModel>
+<style>
+    .table-hover tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+
+    .accepted {
+        background-color: rgb(208, 233, 198);
+    }
+
+    .rejected {
+        background-color: rgb(255, 173, 173);
+    }
+
+    .Notchecked {
+        background-color: rgb(255, 243, 173);
+    }
+</style>
+
+
+@(Html
+                    .Grid(Model.List)
+                    .Build(columns =>
+                    {
+                        columns.Add(model => model.Tdate.ToFriendlyPersianDateTextify()).Titled("تاریخ ");
+                        columns.Add(model => model.Amount.ToString("N0").ToPersianNumbers() + " تومان ").Titled("مبلغ ");
+                        columns.Add(model => model.TType).Titled("نوع تراکنش");
+                        columns.Add(model => model.Description).Titled("توضیحات");
+
+                    })
+                    .Empty("تراکنشی یافت نشد")
+                    .Filterable()
+                    .Sortable()
+                    .Pageable(pager =>
+                    {
+                        pager.ProcessorType = GridProcessorType.Manual;
+                        pager.TotalRows = ViewBag.TotalRows;
+                        pager.RowsPerPage = 10;
+                    })
+                                            .Css("css-classes") // Overwrites all classes with the new ones
+                                .AppendCss("table-hover") // Appends classes to the current ones
+                                .RowCss(model => model.TType == WalletTransactionType.Approved ? "accepted" : model.TType == WalletTransactionType.Rejected ? "rejected" : "Notchecked")
+)
+

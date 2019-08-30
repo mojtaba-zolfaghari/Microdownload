@@ -1,0 +1,16 @@
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.DataLayer.deps.json
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.DataLayer.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.DataLayer.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.Common.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.Entities.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.ViewModels.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.Entities.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.ViewModels.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\bin\Release\netstandard2.0\Katebb.Common.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\obj\Release\netstandard2.0\Katebb.DataLayer.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\obj\Release\netstandard2.0\Katebb.DataLayer.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\obj\Release\netstandard2.0\Katebb.DataLayer.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\obj\Release\netstandard2.0\Katebb.DataLayer.csproj.CopyComplete
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\obj\Release\netstandard2.0\Katebb.DataLayer.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\obj\Release\netstandard2.0\Katebb.DataLayer.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.DataLayer\obj\Release\netstandard2.0\Katebb.DataLayer.csprojAssemblyReference.cache

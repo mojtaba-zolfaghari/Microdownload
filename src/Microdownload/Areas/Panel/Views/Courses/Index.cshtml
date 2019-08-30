@@ -1,0 +1,133 @@
+﻿@model IEnumerable<CourseViewModel>
+
+@{
+    ViewData["Title"] = "دوره ها";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="panel-title">@ViewData["Title"]</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="btn-group pull-right">
+                    <a class="btn btn-success" href="#" id="btnCreateNew"><i class="fa fa-plus"> </i> افزودن دوره جدید</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="panel-body">
+
+
+        @(Html
+                                                              .Grid(Model)
+                                                              .Build(columns =>
+                                                              {
+                                                                  columns.Add(model => model.CourseName).Titled("نام دوره");
+                                                                  columns.Add(model => model.CourseStatus).Titled("نوع دوره");
+                                                                  columns.Add(model => model.CreatedDate.ToFriendlyPersianDateTextify()).Titled("تاریخ ایجاد");
+                                                                  columns.Add(model => model.Price.ToString("N0").ToPersianNumbers()).Titled("قیمت دوره(ریال)");
+                                                                  columns.Add(model => model.StartDate.ToFriendlyPersianDateTextify()).Titled("تاریخ شروع دوره");
+
+
+
+                                                                  columns.Add(model => $"<a  asp-controller=\"Corses\" asp-action=\"EditCourse\"   href =\"Courses/EditCourse/{model.Id}\" class=\"btn btn-sm btn-info\" style=\"margin-left:10px\">نمایش</a>").Encoded(false);
+                                                                  columns.Add(model => $"<a  href=\"#\"  id=\"btnEdit-{model.Id}\" data-edit-id=\"{model.Id}\" class=\"btn btn-sm btn-danger\" style=\"margin-left:10px\">ویرایش</a>").Encoded(false);
+
+
+                                                              })
+                                                                    .Empty("دوره ای یافت نشد")
+                                                                    .Filterable()
+                                                                    .Sortable()
+                                                                    .Pageable(pager =>
+                                                                    {
+                                                                        pager.ProcessorType = GridProcessorType.Manual;
+                                                                        pager.TotalRows = ViewBag.TotalRows;
+                                                                        pager.RowsPerPage = 10;
+                                                                    })
+        )
+
+
+    </div>
+
+
+
+    <div class="panel-footer">
+        تعداد کل دوره ها : @Model.Count()
+    </div>
+
+
+</div>
+
+
+
+@section Scripts
+    {
+    <script src="~/server/assets/js/core/MvcGrid.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btnCreateNew').click(function (e) {
+                e.preventDefault();
+
+                $.bootstrapModalAjaxForm({
+
+                    postUrl: '@Url.Action("AddCourse", "Courses")',
+                    renderModalPartialViewUrl: '@Url.Action("RenderCourse", "Courses")',
+                    renderModalPartialViewData: {},
+                    loginUrl: '/Panel/login',
+                    beforePostHandler: function () {
+                    },
+                    completeHandler: function () {
+                        location.reload();
+                    },
+                    errorHandler: function () {
+                    }
+                });
+            });
+
+            $("a[id^='btnEdit']").click(function (e) {
+                e.preventDefault();
+                var slideId = $(this).data("edit-id");
+
+                $.bootstrapModalAjaxForm({
+                    postUrl: '@Url.Action("AddCourse", "Courses")',
+                    renderModalPartialViewUrl: '@Url.Action("RenderCourse", "Courses")',
+                    renderModalPartialViewData: JSON.stringify({ "id": slideId }),
+                    loginUrl: '/Panel/login',
+                    beforePostHandler: function () {
+                    },
+                    completeHandler: function () {
+                        location.reload();
+                    },
+                    errorHandler: function () {
+                    }
+                });
+            });
+
+            $("a[id^='btnDelete']").click(function (e) {
+                e.preventDefault();
+                var slideId = $(this).data("delete-id");
+
+                $.bootstrapModalAjaxForm({
+                    postUrl: '@Url.Action("DeleteInsurance", "Insurance")',
+                    renderModalPartialViewUrl: '@Url.Action("RenderDeleteInsurance", "Insurance")',
+                    renderModalPartialViewData: JSON.stringify({ "id": slideId }),
+                    loginUrl: '/Panel/login',
+                    beforePostHandler: function () {
+                    },
+                    completeHandler: function () {
+                        location.reload();
+                    },
+                    errorHandler: function () {
+                    }
+                });
+            });
+        });
+
+
+    </script>
+
+}

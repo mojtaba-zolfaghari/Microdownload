@@ -1,0 +1,29 @@
+﻿
+
+<li>
+    <a href="#"><i class="icon-user-lock"></i> <span>تنظیمات</span></a>
+    <ul>
+
+        <li>
+            <a asp-controller="RolesManager" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                نقش‌های سیستم
+            </a>
+        </li>
+
+        <li>
+            <a asp-controller="SiteSetting" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                تنظیمات سایت و پورتال
+            </a>
+        </li>
+
+
+
+
+
+        <li>
+            <a asp-controller="SystemLog" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                گزارش رخ‌دادهای سیستم
+            </a>
+        </li>
+    </ul>
+</li>

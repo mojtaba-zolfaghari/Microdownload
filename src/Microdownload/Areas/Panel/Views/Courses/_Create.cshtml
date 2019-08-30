@@ -1,0 +1,88 @@
+﻿@model CourseViewModel
+@{List<InstituteViewModel> _listInstitute = (List<InstituteViewModel>)ViewData["ListInstitute"]; }
+@{List<TeacherViewModel> _listTeacher = (List<TeacherViewModel>)ViewData["ListTeacher"]; }
+
+<script type="text/javascript">
+
+    $('.dselect2').select2();
+    $('#Amount').number(true, 0);
+
+</script>
+
+<partial name="_CustomValidationSummary" />
+<form asp-action="AddCourse" method="post" enctype="multipart/form-data" class="form-horizontal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                @if (string.IsNullOrEmpty(Model?.Id.ToString()))
+                {
+                    <h4 class="modal-title">افزودن دوره جدید</h4>
+                }
+                else
+                {
+                    <h4 class="modal-title">ویرایش دوره</h4>
+                }
+            </div>
+            <div class="modal-body">
+
+                <input asp-for="Id" hidden="hidden" />
+                <div class="form-group">
+                    <label asp-for="CourseName" class="col col-lg-3 control-label"></label>
+                    <div class="col col-lg-9 controls">
+                        <div class="input-group top15">
+                            <input dir="rtl" asp-for="CourseName" class="form-control" />
+                            <div class="input-group-addon" dir="ltr">فارسی</div>
+                        </div>
+                        <span asp-validation-for="CourseName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TeacherCourseIdes" class="col col-lg-3 control-label"></label>
+                    <div class="col col-lg-9 controls">
+                        <select asp-for="TeacherCourseIdes" class="form-control dselect2 multiselect" style="width:100%">
+                            @{
+                                foreach (var item in _listTeacher)
+                                {
+                                    <option value="@item.Id">@item.User.DisplayName</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="TeacherCourseIdes" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Link" class="col col-lg-3 control-label"></label>
+                    <div class="col col-lg-9 controls">
+                        <div class="input-group top15">
+                            <input dir="ltr" placeholder="http://" asp-for="Link" class="form-control" />
+                            <div class="input-group-addon" dir="ltr">حروف انگلیسی</div>
+                        </div>
+                        <span asp-validation-for="Link" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Price" class="col col-lg-3 control-label"></label>
+                    <div class="col col-lg-9 controls">
+                        <div class="input-group top15">
+                            <input dir="ltr" asp-for="Price" class="form-control" />
+                            <div class="input-group-addon" dir="ltr">عدد انگلیسی | ریال</div>
+                        </div>
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit">ثبت</button>
+                <button class="btn" data-dismiss="modal" aria-hidden="true">انصراف</button>
+            </div>
+        </div>
+    </div>
+</form>

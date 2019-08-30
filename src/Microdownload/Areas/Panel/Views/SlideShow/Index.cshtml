@@ -1,0 +1,72 @@
+﻿@model IEnumerable<SlideShowViewModel>
+@{
+    ViewData["Title"] = "مدیریت اسلاید شو";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="panel-title">@ViewData["Title"]</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="btn-group pull-right">
+                    <a class="btn btn-success" asp-controller="SlideShow" asp-action="AddSlide" id="btnCreate">ایجاد یک اسلاید جدید</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="panel-body">
+        @{ await Html.RenderPartialAsync("_AllSlideList", Model).ConfigureAwait(false); }
+
+    </div>
+</div>
+
+
+
+@section Scripts
+    {
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            $("a[id^='btnDelete']").click(function (e) {
+                e.preventDefault(); 
+                var slideId = $(this).data("delete-id");
+
+                $.bootstrapModalAjaxForm({
+                    postUrl: '@Url.Action("Delete", "SlideShow")',
+                    renderModalPartialViewUrl: '@Url.Action("RenderDeleteSlideshow", "SlideShow")',
+                    renderModalPartialViewData: JSON.stringify({ "id": slideId }),
+                    loginUrl: '/Panel/login',
+                    beforePostHandler: function () {
+                    },
+                    completeHandler: function () {
+                        location.reload();
+                    },
+                    errorHandler: function () {
+                    }
+                });
+            });
+        });
+
+
+    </script>
+    <script>
+
+        $(document).on('ready', function () {
+            $("input-id").fileinput({
+                rtl: true,
+                theme: "fa",
+                showUpload: false,
+                language: "fa",
+                allowedFileExtensions: ["jpg", "png", "gif"]
+            });
+        });
+    </script>
+}

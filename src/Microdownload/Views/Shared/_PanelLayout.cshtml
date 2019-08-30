@@ -1,0 +1,239 @@
+﻿@{
+    var pageTitle = ViewData["Title"] ?? "پنل کاربری کانون آموزش تخصصی بیمه";
+}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@pageTitle</title>
+    <!-- Global stylesheets -->
+    <link href="~/server/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/server/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="~/server/assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="~/server/assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="~/server/assets/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="~/server/mvcg/Content/MvcGrid/mvc-grid.css" rel="stylesheet" />
+    <link href="~/server/assets/css/select2.min.css" rel="stylesheet" />
+    @await RenderSectionAsync("Styles", required: false).ConfigureAwait(false)
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    <script src="~/js/site.min.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/loaders/blockui.min.js"></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="~/server/assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/plugins/pickers/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/server/assets/js/core/app.js"></script>
+    <script type="text/javascript" src="~/server/mvcg/Scripts/MvcGrid/mvc-grid.js"></script>
+    <script src="~/server/assets/js/core/select2.min.js"></script>
+    <script src="~/server/assets/js/core/jquery.number.min.js"></script>
+    <!-- /theme JS files -->
+
+
+</head>
+<body>
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" asp-area="@AreaConstants.PanelArea" asp-action="Index" asp-controller="Home"><img src="~/server/assets/images/logo_light.png" alt=""></a>
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <ul class="nav navbar-nav">
+                    <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+                </ul>
+                <p class="navbar-text"><span class="label bg-success">آنلاین</span></p>
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span>مدیریت حساب کاربری</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+
+
+                            <li>
+                                <a asp-controller="UserCard" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                                    <i class="icon-user-plus"></i>
+                                    برگه‌ی کاربری من
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-controller="UserProfile" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                                    <i class="icon-user-plus"></i>
+                                    تنظیمات کاربری من
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-controller="ChangePassword" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                                    <i class="icon-stack-check"></i>
+                                    تغییر کلمه‌ی عبور
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a asp-controller="Login" asp-action="LogOff" asp-area="@AreaConstants.PanelArea">
+                                    <i class="icon-switch2"></i>
+                                    خروج
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+                    </li>
+                </ul>
+            }
+
+
+        </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page container -->
+    <div class="page-container">
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- Main sidebar -->
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="sidebar sidebar-main">
+                    <div class="sidebar-content">
+                        <!-- User menu -->
+                        @{
+                            await Html.RenderPartialAsync("_SideBarUser").ConfigureAwait(false);
+                        }
+
+
+
+                        <!-- /user menu -->
+                        <!-- Main navigation -->
+                        <div class="sidebar-category sidebar-category-visible">
+                            <div class="category-content no-padding">
+                                <ul class="navigation navigation-main navigation-accordion">
+                                    <!-- Main -->
+                                    <li class="navigation-header"><span>صفحه اصلی</span> <i class="icon-menu" title="Main pages"></i></li>
+                                    <li><a asp-area="@AreaConstants.PanelArea" asp-action="Index" asp-controller="Home"><i class="icon-home4"></i> <span>داشبورد</span></a></li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        await Html.RenderPartialAsync("_UserMenu").ConfigureAwait(false);
+
+                                        if (User.IsInRole(ConstantRoles.Admin))
+                                        {
+                                            await Html.RenderPartialAsync("_AdminMenu").ConfigureAwait(false);
+                                        }
+                                    }
+                                    else
+                                    {
+
+                                        <li>
+                                            <a asp-area="@AreaConstants.PanelArea" asp-controller="Login" asp-action="Index">
+                                                <i class="icon-lock2"></i> <span>ورود به سیستم</span>
+                                            </a>
+                                        </li>
+
+
+                                    }
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /main navigation -->
+                    </div>
+                </div>
+            }
+            <!-- /main sidebar -->
+            <!-- Main content -->
+            <div class="content-wrapper">
+                <!-- Page header -->
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="page-header page-header-default">
+                        <div class="page-header-content">
+                            <div class="page-title">
+                                <h4><i class="icon-arrow-right6 position-left"></i> <span class="text-semibold">@pageTitle</span></h4>
+                            </div>
+                            <div class="heading-elements">
+                                <div class="heading-btn-group">
+                                    <a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>آمار</span></a>
+                                    <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>ماشین حساب</span></a>
+                                    <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>مشاهده سایت</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="breadcrumb-line">
+                            <breadcrumb asp-homepage-title="داشبورد"
+                                        asp-homepage-url="@Url.Action("Index", "Home", values: new { area = AreaConstants.PanelArea })"
+                                        asp-homepage-glyphicon="fa fa-home"></breadcrumb>
+
+
+                            <ul class="breadcrumb-elements">
+                                <li><a href="#"><i class="icon-comment-discussion position-left"></i> پشتیبانی</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-gear position-left"></i>
+                                        تنظیمات
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#"><i class="icon-user-lock"></i> تنظیمات امنیتی نمایندگان</a></li>
+                                        <li><a href="#"><i class="icon-statistics"></i> تجزیه و تحلیل</a></li>
+                                        <li><a href="#"><i class="icon-accessibility"></i> سطح دسترسی</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="icon-gear"></i> همه تنظیمات</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>}
+                <!-- /page header -->
+                <!-- Content area -->
+                <div class="content">
+                    <!-- Main charts -->
+                    <div class="row">
+                        @RenderBody()
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="footer text-muted">
+                        &copy;  <a target="_blank" href="#">گروه برنامه نویسی میلادسافت</a>
+                    </div>
+                    <!-- /footer -->
+                </div>
+                <!-- /content area -->
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- /page container -->
+    @await RenderSectionAsync("Scripts", required: false)
+    @*@await Component.InvokeAsync("NToastNotify")*@
+    <script>
+        window.replainSettings = { id: '64f7bbb3-a35f-4d1e-a2bd-19fd23491a48' };
+        (function (u) {
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = u;
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })('https://widget.replain.cc/dist/client.js');
+    </script>
+</body>
+</html>
+

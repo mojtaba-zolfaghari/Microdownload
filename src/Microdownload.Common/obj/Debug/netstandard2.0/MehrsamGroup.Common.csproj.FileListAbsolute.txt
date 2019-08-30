@@ -1,0 +1,9 @@
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\bin\Debug\netstandard2.0\Katebb.Common.deps.json
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\bin\Debug\netstandard2.0\Katebb.Common.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\bin\Debug\netstandard2.0\Katebb.Common.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\obj\Debug\netstandard2.0\Katebb.Common.csprojResolveAssemblyReference.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\obj\Debug\netstandard2.0\Katebb.Common.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\obj\Debug\netstandard2.0\Katebb.Common.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\obj\Debug\netstandard2.0\Katebb.Common.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\obj\Debug\netstandard2.0\Katebb.Common.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Common\obj\Debug\netstandard2.0\Katebb.Common.pdb

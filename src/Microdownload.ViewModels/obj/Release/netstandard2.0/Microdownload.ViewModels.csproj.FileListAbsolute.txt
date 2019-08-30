@@ -1,0 +1,14 @@
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\bin\Release\netstandard2.0\Microdownload.ViewModels.deps.json
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\bin\Release\netstandard2.0\Microdownload.ViewModels.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\bin\Release\netstandard2.0\Microdownload.ViewModels.pdb
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\bin\Release\netstandard2.0\Microdownload.Common.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\bin\Release\netstandard2.0\Microdownload.Entities.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\bin\Release\netstandard2.0\Microdownload.Entities.pdb
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\bin\Release\netstandard2.0\Microdownload.Common.pdb
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\obj\Release\netstandard2.0\Microdownload.ViewModels.csprojAssemblyReference.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\obj\Release\netstandard2.0\Microdownload.ViewModels.csproj.CoreCompileInputs.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\obj\Release\netstandard2.0\Microdownload.ViewModels.AssemblyInfoInputs.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\obj\Release\netstandard2.0\Microdownload.ViewModels.AssemblyInfo.cs
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\obj\Release\netstandard2.0\Microdownload.ViewModels.csproj.CopyComplete
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\obj\Release\netstandard2.0\Microdownload.ViewModels.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.ViewModels\obj\Release\netstandard2.0\Microdownload.ViewModels.pdb

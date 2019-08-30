@@ -1,0 +1,198 @@
+﻿<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,700" rel="stylesheet">
+<!-- inject:css-->
+<link rel="stylesheet" href="~/Client/css/plugin.min.css">
+<link rel="stylesheet" href="~/Client/style.css">
+<!-- endinject -->
+<body>
+
+
+    @RenderBody()
+    <cache expires-after="@TimeSpan.FromMinutes(10)">
+        <vc:footer></vc:footer>
+    </cache>
+
+
+    <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="login_modal_label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login_modal_label"><i class="la la-lock"></i> ورود</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="بستن">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <a asp-area="@AreaConstants.PanelArea" asp-controller="Home" asp-action="Index" class="btn btn-block btn-lg btn-gradient btn-gradient-two">ورود با نام کاربری و رمز عبور</a>
+
+                    <div class="form-excerpts">
+                        <div class="social-login">
+                            <span>یا اتصال با</span>
+                            <p><a class="btn btn-outline-secondary"><i class="fab fa-facebook-f"></i> فیسبوک</a><a class="btn btn-outline-danger"><i class="fab fa-google-plus-g"></i> گوگل</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signup_modal" tabindex="-1" role="dialog" aria-labelledby="signup_modal_label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signup_modal_label"><i class="la la-lock"></i> ثبت نام</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    
+                </div>
+                <div class="modal-body">
+                    <form asp-controller="Register"
+                          asp-action="Index"
+                          id="signup-form"
+                          method="post"
+                          class="form-horizontal top30">
+                        @{ await Html.RenderPartialAsync("_CustomValidationSummary").ConfigureAwait(false); }
+
+
+
+                        <div class="form-group">
+                            <label asp-for="FirstName" class="col-md-3 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <div class="input-group-addon">فارسی</div>
+                                    <input dir="rtl" asp-for="FirstName" class="form-control" />
+                                </div>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label asp-for="LastName" class="col-md-3 control-label"></label>
+                            <div class="col-md-9">
+                                <div class="input-group">
+                                    <div class="input-group-addon">فارسی</div>
+                                    <input dir="rtl" asp-for="LastName" class="form-control" />
+                                </div>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Email" class="col-md-3 control-label"></label>
+                            <div class="col-md-9">
+                                <input dir="ltr" asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Username" class="col-md-3 control-label"></label>
+                            <div class="col-md-9">
+
+                                <div class="input-group">
+                                    <input dir="ltr" asp-for="Username" class="form-control" />
+                                    <div class="input-group-addon">جهت ورود</div>
+
+                                </div>
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PhoneNumber" class="col-md-3 control-label"></label>
+                            <div class="col-md-9">
+                                <input dir="ltr" asp-for="PhoneNumber" class="form-control" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Password" class="col-md-3 control-label"></label>
+                            <div class="col-md-9">
+                                <input dir="ltr" asp-for="Password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ConfirmPassword" class="col-md-3 control-label"></label>
+                            <div class="col-md-9">
+                                <input dir="ltr" asp-for="ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col col-md-3 control-label">
+                                کد امنیتی
+                            </label>
+                            <div class="controls col col-md-9">
+                                <dnt-captcha asp-captcha-generator-max="1000"
+                                             asp-captcha-generator-min="1"
+                                             asp-captcha-generator-language="Persian"
+                                             asp-font-name="Tahoma"
+                                             asp-font-size="20"
+                                             asp-fore-color="#333333"
+                                             asp-back-color="#ccc"
+                                             asp-text-box-class="text-box single-line form-control"
+                                             asp-text-box-template="<div class='input-group'><span class='input-group-addon'><span class='glyphicon glyphicon-lock'></span></span>{0}</div>"
+                                             asp-validation-message-class="text-danger" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-6">
+                                <button type="submit" class="btn btn-info col-md-6  animated flash">ثبت اطلاعات</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0C5etf1GVmL_ldVAichWwFFVcDfa1y_c"></script>
+    <!-- inject:js-->
+    <script src="~/Client/js/plugins.min.js"></script>
+    <script src="~/Client/js/script.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- endinject-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "ثبت نام کاربر جدید";
+}
+<div class="panel panel-default top30 col-md-6 col-md-push-3">
+
+    <div class=" panel-heading">
+        @ViewData["Title"]
+    </div>
+    <div class="panel-body">
+
+
+        
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        function triggerRemoteValidation() {
+            $('#@nameof(RegisterViewModel.Username)').removeData('previousValue');
+            $('form').validate().element('#@nameof(RegisterViewModel.Username)');
+
+            $('#@nameof(RegisterViewModel.Email)').removeData('previousValue');
+            $('form').validate().element('#@nameof(RegisterViewModel.Email)');
+        }
+    </script>
+}

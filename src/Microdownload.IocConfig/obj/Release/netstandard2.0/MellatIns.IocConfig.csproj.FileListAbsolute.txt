@@ -1,0 +1,40 @@
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.IocConfig.deps.json
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.IocConfig.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.IocConfig.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.DataLayer.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Services.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.ViewModels.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.DataLayer.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Entities.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Services.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.ViewModels.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.csprojAssemblyReference.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.csproj.CopyComplete
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.IocConfig.deps.json
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.IocConfig.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.IocConfig.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.DataLayer.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Services.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.ViewModels.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.DataLayer.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Entities.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.Services.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\bin\Release\netstandard2.0\MellatIns.ViewModels.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.csprojAssemblyReference.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.csproj.CoreCompileInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.AssemblyInfoInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.AssemblyInfo.cs
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.csproj.CopyComplete
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.IocConfig\obj\Release\netstandard2.0\MellatIns.IocConfig.pdb

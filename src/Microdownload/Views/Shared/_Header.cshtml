@@ -1,0 +1,84 @@
+﻿@{
+    var pageTitle = ViewData["Title"] ?? "مرجع آموزش آنلاین";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@pageTitle</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Client/img/fevicon.png">
+</head>
+<section class="intro-wrapper bgimage overlay overlay--dark">
+    <div class="bg_image_holder"><img src="~/Client/img/intro.jpg" alt=""></div>
+
+    <partial name="_UserPublicMenu" />
+    <div class="directory_content_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="search_title_area">
+                        <h2 class="title">دوره مورد نظر خود را پیدا کنید</h2>
+                        <p class="sub_title">دوره را پیدا ، مقایسه و انتخاب کنید   ...</p>
+                    </div><!-- ends: .search_title_area -->
+                    <form action="https://www.rtl-theme.com/author/paradigmshift/" class="search_form">
+                        <div class="atbd_seach_fields_wrapper">
+                            <div class="single_search_field search_query">
+                                <input class="form-control search_fields" type="text" placeholder="به دنبال چه دوره ای هستید؟">
+                            </div>
+                            <div class="single_search_field search_category">
+                                <select class="search_fields" id="at_biz_dir-category">
+                                    <option value="">انتخاب یک دسته</option>
+                                    <option value="automobile">خودرو</option>
+                                    <option value="education">آموزش</option>
+                                    <option value="event">رویداد</option>
+                                </select>
+                            </div>
+                            <div class="single_search_field search_location">
+                                <select class="search_fields" id="at_biz_dir-location">
+                                    <option value="">انتخاب یک مکان</option>
+                                    <option value="ab">نمونه الف</option>
+                                    <option value="australia">تهران</option>
+                                    <option value="australia-australia">اصفهان</option>
+                                </select>
+                            </div>
+                            <div class="atbd_submit_btn">
+                                <button type="submit" class="btn btn-block btn-gradient btn-gradient-one btn-md btn_search">جستجو</button>
+                            </div>
+                        </div>
+                    </form><!-- ends: .search_form -->
+                    <div class="directory_home_category_area">
+                        <ul class="categories">
+                            <li>
+                                <a>
+                                    <span class="color-primary"><i class="la la-cutlery"></i></span>
+                                    رستوران
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="color-success"><i class="la la-map-marker"></i></span>
+                                    مکان ها
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="color-warning"><i class="la la-shopping-cart"></i></span>
+                                    خرید
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="color-danger"><i class="la la-bed"></i></span>
+                                    هتل
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- ends: .directory_home_category_area -->
+                </div><!-- ends: .col-lg-10 -->
+            </div>
+        </div>
+    </div><!-- ends: .directory_search_area -->
+</section><!-- ends: .intro-wrapper -->

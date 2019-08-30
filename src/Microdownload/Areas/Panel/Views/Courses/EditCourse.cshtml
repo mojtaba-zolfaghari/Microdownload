@@ -1,0 +1,234 @@
+﻿@model CourseViewModel
+@{List<TeacherViewModel> _listTeacher = (List<TeacherViewModel>)ViewData["ListTeacher"]; }
+@{var tc = new List<TeacherCourseViewModel>();
+    tc = Model.TeacherCourse.ToList();
+
+}
+<script type="text/javascript">
+
+    $('.dselect2').select2();
+    $('#Amount').number(true, 0);
+
+</script>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">@ViewData["Title"]</h3>
+    </div>
+    <form asp-controller="Courses" enctype="multipart/form-data" asp-action="EditCourse" method="post" class="form-horizontal">
+
+
+        <div class="panel-body">
+
+            @{ await Html.RenderPartialAsync("_CustomValidationSummary").ConfigureAwait(false); }
+            <div align="center">
+                <img src="~/images/MicrodownloadIcon.png" class="img-responsive  animated rubberBand" alt="@ViewData["Title"]" />
+            </div>
+
+            <h2>اطلاعات شما</h2>
+            <hr />
+
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CourseName, new { @class = "col-md-3 control-label col-md-push-1" })
+                <div class="col-md-6">
+                    @Html.TextBoxFor(model => model.CourseName, new { @class = "form-control" })
+                    <span asp-validation-for="CourseName" class="text-danger"></span>
+
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TeacherCourse, new { @class = "col-md-3 control-label col-md-push-1" })
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <select asp-for="TeacherCourse" class="form-control dselect2 multiselect">
+                            @{
+
+
+                                foreach (var item in tc)
+                                {
+                                    <option value="@item.Id">@item.Teacher.User.DisplayName</option>
+                                }
+                            }
+                        </select>
+                        <div class="input-group-addon">تغییر وضعیت دوره</div>
+                        <span asp-validation-for="TeacherCourse" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <select asp-for="TeacherCourseIdes" class="form-control dselect2 multiselect" style="width:100%">
+                        @{
+                            foreach (var item in _listTeacher)
+                            {
+                                <option value="@item.Id">@item.User.DisplayName</option>
+                            }
+                        }
+                    </select>
+                    <span asp-validation-for="TeacherCourseIdes" class="text-danger"></span>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.ImageUrl, new { @class = "col-md-3 control-label col-md-push-1" })
+                <div class="col-md-6">
+                    <img src="@Model.ImageUrl" width="350" height="280" alt="تصویر دوره" />
+                    <hr />
+                    <div class="input-group">
+                        <input type="file" name="ImageUrlFile" value="" />
+                        <input asp-for="ImageUrl" class="form-control disabled text-left hidden" value="ImageUrlFile" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CourseStatus, new { @class = "col-md-3 control-label col-md-push-1" })
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <select asp-for="CourseStatus" asp-items="Html.GetEnumSelectList<CourseStatus>()" class="form-control dselect2"></select>
+                        <div class="input-group-addon">تغییر وضعیت دوره</div>
+                        <span asp-validation-for="CourseStatus" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.StartDate, new { @class = "col-md-3 control-label col-md-push-1" })
+                <div class="col-md-6">
+                    <div class="input-group">
+                        @Html.TextBoxFor(model => model.StartDate, new { @class = "form-control", dir = "ltr" })
+                        <div class="input-group-addon">1371/06/03</div>
+                        <span asp-validation-for="StartDate" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Price, new { @class = "col-md-3 control-label col-md-push-1" })
+                <div class="col-md-6">
+                    <div class="input-group">
+                        @Html.TextBoxFor(model => model.Price, new { @class = "form-control", dir = "ltr" })
+                        <div class="input-group-addon">ریال</div>
+                        <span asp-validation-for="Price" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Link, new { @class = "col-md-3 control-label col-md-push-1" })
+                <div class="col-md-6">
+                    <div class="input-group">
+                        @Html.TextBoxFor(model => model.Link, new { @class = "form-control", dir = "ltr" })
+                        <div class="input-group-addon">لینک دوره در کلاس مجازی </div>
+                        <span asp-validation-for="Link" class="text-danger"></span>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <hr />
+
+
+
+
+
+
+
+
+            <h2>دانشجویان دوره</h2>
+
+
+
+
+        </div>
+
+
+
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col col-md-3 col-xs-6">
+                    <button type="submit" class="btn btn-info w100"><i class="fa fa-save"> </i> ذخیره اطلاعات </button>
+                </div>
+                <div class="col col-md-3 col-xs-6">
+                    <a class="btn btn-danger w100" asp-area="@AreaConstants.PanelArea" asp-controller="Home" asp-action="Index"> بازگشت  <i class="fa  fa-angle-double-left"> </i></a>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Styles {
+    <link href="~/css/fileinput.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+@section Scripts
+    {
+    <script src="~/js/fileinput.min.js" type="text/javascript" asp-append-version="true"></script>
+
+    <script type="text/javascript">
+        function triggerRemoteValidation() {
+            $('#@nameof(UserProfileViewModel.UserName)').removeData('previousValue');
+            $('form').validate().element('#@nameof(UserProfileViewModel.UserName)');
+
+            $('#@nameof(UserProfileViewModel.Email)').removeData('previousValue');
+            $('form').validate().element('#@nameof(UserProfileViewModel.Email)');
+        }
+
+    $(document).on('ready', function () {
+        $("#userphoto").fileinput({
+            rtl: true,
+            theme: "fa",
+            showUpload: false,
+            language:"fa",
+            allowedFileExtensions: ["jpg", "png", "gif"]
+        });
+    });
+    </script>
+
+
+}

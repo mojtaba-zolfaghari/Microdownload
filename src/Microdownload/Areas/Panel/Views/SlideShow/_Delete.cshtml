@@ -1,0 +1,24 @@
+﻿@model SlideShowViewModel
+@{ await Html.RenderPartialAsync("_CustomValidationSummary").ConfigureAwait(false); }
+<form asp-action="Delete" method="post" class="form-horizontal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">حذف یک اسلاید</h4>
+            </div>
+            <div class="modal-body">
+                <span class="text-center">
+                    آیا می‌خواهید اسلاید
+                    <strong>@Model.Title</strong>
+                    را حذف کنید؟
+                </span>
+                <input asp-for="Id"  hidden="hidden"/>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" type="submit">تائید حذف</button>
+                <button class="btn" data-dismiss="modal" aria-hidden="true">انصراف</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\bin\Release\netstandard2.0\Microdownload.Entities.deps.json
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\bin\Release\netstandard2.0\Microdownload.Entities.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\bin\Release\netstandard2.0\Microdownload.Entities.pdb
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\bin\Release\netstandard2.0\Microdownload.Common.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\bin\Release\netstandard2.0\Microdownload.Common.pdb
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\obj\Release\netstandard2.0\Microdownload.Entities.csprojAssemblyReference.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\obj\Release\netstandard2.0\Microdownload.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\obj\Release\netstandard2.0\Microdownload.Entities.AssemblyInfoInputs.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\obj\Release\netstandard2.0\Microdownload.Entities.AssemblyInfo.cs
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\obj\Release\netstandard2.0\Microdownload.Entities.csproj.CopyComplete
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\obj\Release\netstandard2.0\Microdownload.Entities.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Entities\obj\Release\netstandard2.0\Microdownload.Entities.pdb

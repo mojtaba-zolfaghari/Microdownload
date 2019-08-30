@@ -1,0 +1,398 @@
+﻿@model PortalSettingViewModel
+
+@{
+    ViewData["Title"] = "تنظیمات سایت و پورتال";
+}
+<form method="post"
+      asp-controller="SiteSetting"
+      asp-action="Index"
+      asp-route-returnurl="@ViewBag.ReturnUrl"
+      class="form-horizontal"
+      role="form"
+      data-ajax-update="#Message"
+      data-ajax="true"
+      data-ajax-alert-confirm="تنظیمات تغییر کند؟"
+      data-ajax-begin="dataAjaxBegin"
+      data-ajax-success="dataAjaxSuccess"
+      data-ajax-failure="dataAjaxFailure">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@ViewData["Title"]</h3>
+        </div>
+        <div class="panel-body">
+
+
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <fieldset>
+                            <h2>اطلاعات سایت</h2>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SiteUrl, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.SiteUrl, new { @class = "form-control", dir = "ltr" })
+                                        <div class="input-group-addon" dir="ltr">https://</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SiteName, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">به فارسی :</div>
+                                        @Html.TextBoxFor(model => model.SiteName, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SiteKeywords, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextAreaFor(model => model.SiteKeywords, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SiteDescription, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextAreaFor(model => model.SiteDescription, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Top, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextAreaFor(model => model.Top, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                        <fieldset>
+                            <h2>فوتر سایت و لینک های مفید</h2>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Aparat, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.Aparat, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Email, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.facebook, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.facebook, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.googleplus, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.googleplus, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Instagram, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.Instagram, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.linkedin, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.linkedin, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.OfficeAddress, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextAreaFor(model => model.OfficeAddress, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.OfficePhone, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.OfficePhone, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.rss, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.rss, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Telegram, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.Telegram, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.twitter, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.twitter, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.youtube, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.youtube, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.CopyRight, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextAreaFor(model => model.CopyRight, new { @class = "form-control IranicartTextEditor", rows = 5 })
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle1, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle1, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink1, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink1, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle2, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle2, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink2, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink2, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle3, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle3, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink3, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink3, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle4, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle4, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink4, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink4, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle5, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle5, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink5, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink5, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle6, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle6, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink6, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink6, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle7, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle7, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink7, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink7, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle8, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle8, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink8, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink8, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle9, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle9, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink9, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink9, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLinkTitle10, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLinkTitle10, new { @class = "form-control IranicartTextEditor" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FooterLink10, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.FooterLink10, new { @class = "form-control IranicartTextEditor", dir = "ltr" })
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+
+
+                        <fieldset>
+                            <h2>درگاه پرداخت</h2>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ZarinPalCode, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.ZarinPalCode, new { @class = "form-control", dir = "ltr" })
+                                        <div class="input-group-addon" dir="ltr">Merchant Code :</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <h2>تنظیمات کلی سیستم </h2>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SubscriptionFee, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.SubscriptionFee, new { @class = "form-control price", dir = "ltr" })
+                                        <div class="input-group-addon">تومان</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Tax, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.Tax, new { @class = "form-control price", dir = "ltr" })
+                                        <div class="input-group-addon">درصد</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.GetTopCourse, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.GetTopCourse, new { @class = "form-control price", dir = "ltr" })
+                                        <div class="input-group-addon">درصد</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.GetTopInstitute, new { @class = "col-md-3 control-label" })
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        @Html.TextBoxFor(model => model.GetTopInstitute, new { @class = "form-control price", dir = "ltr" })
+                                        <div class="input-group-addon">درصد</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-success w100"> <i class="fa fa-save fa-lg"></i> ذخیره</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+

@@ -1,0 +1,40 @@
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.IocConfig.deps.json
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.IocConfig.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.IocConfig.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Common.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.DataLayer.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Entities.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Services.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.ViewModels.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Common.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.DataLayer.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Entities.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.ViewModels.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Services.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.csprojResolveAssemblyReference.cache
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.csproj.CoreCompileInputs.cache
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.AssemblyInfoInputs.cache
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.AssemblyInfo.cs
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.csproj.CopyComplete
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.IocConfig.deps.json
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.IocConfig.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.IocConfig.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Common.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.DataLayer.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Entities.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Services.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.ViewModels.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Common.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.DataLayer.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Entities.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.ViewModels.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\bin\Debug\netstandard2.0\Katebb.Services.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.csprojAssemblyReference.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.csproj.CopyComplete
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.IocConfig\obj\Debug\netstandard2.0\Katebb.IocConfig.pdb

@@ -1,0 +1,335 @@
+﻿@model UserProfileViewModel
+@inject IUsersPhotoService PhotoService
+@inject IOptionsSnapshot<SiteSettings> SiteOptions
+@{
+    ViewData["Title"] = "تنظیمات کاربری";
+    var changePasswordUrl = Url.Action("Index", "ChangePassword");
+    var imageOptions = SiteOptions.Value.UserAvatarImageOptions;
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">@ViewData["Title"]</h3>
+    </div><form asp-controller="UserProfile"
+                asp-action="Index"
+                method="post"
+                enctype="multipart/form-data"
+                class="form-horizontal">
+              <div class="panel-body">
+                  @if (Model.IsPasswordTooOld)
+                  {
+                      <div class="alert alert-warning" role="alert">
+                          <a href="#" class="close" data-dismiss="alert">×</a>
+                          کلمه‌ی عبور شما بسیار قدیمی است. لطفا جهت تعویض آن <a href="@changePasswordUrl">اینجا</a> کلیک کنید.
+                      </div>
+                  }
+
+
+                  @{ await Html.RenderPartialAsync("_CustomValidationSummary").ConfigureAwait(false); }
+                      <div align="center">
+                          <img src="~/images/MicrodownloadIcon.png" class="img-responsive  animated rubberBand" alt="@ViewData["Title"]" />
+
+                      </div>
+
+                  <h2>اطلاعات شما</h2>
+                  <hr />
+
+
+
+
+                  <div class="form-group">
+                      @Html.LabelFor(model => model.FirstName, new { @class = "col-md-3 control-label col-md-push-1" })
+                      <div class="col-md-6">
+                          @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+                          <span asp-validation-for="FirstName" class="text-danger"></span>
+
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      @Html.LabelFor(model => model.LastName, new { @class = "col-md-3 control-label col-md-push-1" })
+                      <div class="col-md-6">
+                          @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+                          <span asp-validation-for="LastName" class="text-danger"></span>
+
+                      </div>
+                  </div>
+
+                  @if (Model.IsAdminEdit)
+                  {
+                      <div class="form-group">
+                          @Html.LabelFor(model => model.UserName, new { @class = "col-md-3 control-label col-md-push-1" })
+                          <div class="col-md-6">
+                              <div class="input-group">
+                                  @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", dir = "ltr" })
+                                  <div class="input-group-addon">جهت ورود</div>
+                                  <span asp-validation-for="UserName" class="text-danger"></span>
+
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="form-group">
+                          @Html.LabelFor(model => model.Email, new { @class = "col-md-3 control-label col-md-push-1" })
+                          <div class="col-md-6">
+                              <div class="input-group">
+                                  @Html.TextBoxFor(model => model.Email, new { @class = "form-control", dir = "ltr" })
+                                  <div class="input-group-addon">E-Mail</div>
+                                  <span asp-validation-for="Email" class="text-danger"></span>
+
+                              </div>
+                          </div>
+                      </div>
+                  }
+                  else
+                  {
+                      <div class="form-group">
+                          @Html.LabelFor(model => model.UserName, new { @class = "col-md-3 control-label col-md-push-1" })
+                          <div class="col-md-6">
+                              <div class="input-group">
+                                  @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", dir = "ltr", ReadOnly = "ReadOnly" })
+                                  <div class="input-group-addon">جهت ورود</div>
+                                  <span asp-validation-for="UserName" class="text-danger"></span>
+
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="form-group">
+                          @Html.LabelFor(model => model.Email, new { @class = "col-md-3 control-label col-md-push-1" })
+                          <div class="col-md-6">
+                              <div class="input-group">
+                                  @Html.TextBoxFor(model => model.Email, new { @class = "form-control", dir = "ltr", ReadOnly = "ReadOnly" })
+                                  <div class="input-group-addon">E-Mail</div>
+                                  <span asp-validation-for="Email" class="text-danger"></span>
+
+                              </div>
+                          </div>
+                      </div>
+                  }
+
+
+
+                  <div class="form-group">
+                      @Html.LabelFor(model => model.PhoneNumber, new { @class = "col-md-3 control-label col-md-push-1" })
+                      <div class="col-md-6">
+                          <div class="input-group">
+                              @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", dir = "ltr" })
+                              <div class="input-group-addon">مثال : 09123456789</div>
+                              <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="form-group">
+                      <label class="col col-md-3 control-label col-md-push-1"></label>
+                      <div class="controls col col-md-6">
+                          <input asp-for="IsEmailPublic" />
+                          <label asp-for="IsEmailPublic"></label>
+                      </div>
+                  </div>
+
+
+                  <div class="form-group">
+                      <label class="col col-md-3 control-label"></label>
+                      <div class="controls col col-md-6">
+                          <input asp-for="TwoFactorEnabled" />
+                          <label asp-for="TwoFactorEnabled"></label>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col col-md-3 control-label col-md-push-1">تاریخ تولد</label>
+                      <div class="controls col col-md-6 form-inline">
+                          <select asp-for="DateOfBirthDay" class="form-control"
+                                  asp-items="Enumerable.Range(1, 31).Select(i => new SelectListItem { Value = i.ToString(), Text = i.ToString() })">
+                              <option value="">-- روز --</option>
+                          </select> /
+                          <select asp-for="DateOfBirthMonth" class="form-control"
+                                  asp-items="Enumerable.Range(1, 12).Select(i => new SelectListItem { Value = i.ToString(), Text = i.ToString() })">
+                              <option value="">-- ماه --</option>
+                          </select> /
+                          <select asp-for="DateOfBirthYear" class="form-control"
+                                  asp-items="Enumerable.Range(1300, 90).Select(i => new SelectListItem { Value = i.ToString(), Text = i.ToString() })">
+                              <option value="">-- سال --</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label asp-for="Location" class="col-md-3 control-label col-md-push-1"></label>
+                      <div class="col-md-6">
+                          <textarea dir="rtl" asp-for="Location" class="form-control"></textarea>
+                          <span asp-validation-for="Location" class="text-danger"></span>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label asp-for="PostalCode" class="col-md-3 control-label col-md-push-1"></label>
+                      <div class="col-md-6">
+                          <input dir="ltr" asp-for="PostalCode" class="form-control" />
+                          <span asp-validation-for="PostalCode" class="text-danger"></span>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col col-md-3 control-label col-md-push-1"></label>
+                      <div class="controls col col-md-6">
+                          <img src="@PhotoService.GetUserPhotoUrl(Model.PhotoFileName)" asp-append-version="true" class="img-thumbnail" alt="photo" />
+                      </div>
+                  </div>
+
+
+                  <div class="form-group">
+                      <label asp-for="PhotoFileName" class="col-md-3 control-label col-md-push-1"></label>
+                      <div class="controls col col-md-6">
+                          <input type="file" asp-for="Photo" class="form-control valid file" data-preview-file-type="text" data-rtl="true" data-language="fa" data-show-Preview="true" />
+                          <span asp-validation-for="Photo" class="text-danger"></span>
+                      </div>
+                  </div>
+
+
+                  <h2>اطلاعات مالی</h2>
+                  <hr />
+
+
+                  <div class="form-group">
+                      <label asp-for="BankCardNumber" class="col-md-3 control-label col-md-push-1"></label>
+                      <div class="col-md-6">
+                          <input dir="ltr" asp-for="BankCardNumber" class="form-control" />
+                          <span asp-validation-for="BankCardNumber" class="text-danger"></span>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label asp-for="BankAccountNumber" class="col-md-3 control-label col-md-push-1"></label>
+                      <div class="col-md-6">
+                          <input dir="ltr" asp-for="BankAccountNumber" class="form-control" />
+                          <span asp-validation-for="BankAccountNumber" class="text-danger"></span>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label asp-for="ShabaNumber" class="col-md-3 control-label col-md-push-1"></label>
+                      <div class="col-md-6">
+                          <div class="input-group">
+                              <input dir="ltr" asp-for="ShabaNumber" class="form-control" />
+                              <div class="input-group-addon">IR</div>
+                          </div>
+                          <span asp-validation-for="ShabaNumber" class="text-danger"></span>
+                      </div>
+                  </div>
+
+
+
+
+                  @if (Model.IsAdminEdit)
+                  {
+                      <h2>معرف</h2>
+                      <hr />
+
+
+                      <div class="form-group">
+                          <label asp-for="Referrer" class="col-md-3 control-label col-md-push-1"></label>
+                          <div class="col-md-6">
+                              <input dir="ltr" asp-for="Referrer" class="form-control" />
+                              <span asp-validation-for="Referrer" class="text-danger"></span>
+                          </div>
+                      </div>
+
+
+                  }
+                  else
+                  {
+                      <input hidden="hidden" asp-for="Referrer" />
+                  }
+
+                  @if (User.IsInRole(ConstantRoles.Admin))
+                  {
+                      <div class="form-group">
+                          <label asp-for="RegistrarId" class="col-md-3 control-label col-md-push-1"></label>
+                          <div class="col-md-6">
+                              <input dir="ltr" asp-for="RegistrarId" class="form-control" />
+                              <span asp-validation-for="RegistrarId" class="text-danger"></span>
+                          </div>
+                      </div>
+
+                  }
+                  else
+                  {
+                      <input hidden="hidden" asp-for="RegistrarId" />
+
+                  }
+
+
+              </div>
+
+
+
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col col-md-3"></div>
+                <input asp-for="Pid" /> <input asp-for="IsAdminEdit" />
+                <div class="col col-md-3 col-xs-6">
+                    <button type="submit" class="btn btn-info w100"><i class="fa fa-save"> </i> ذخیره اطلاعات </button>
+                </div>
+                <div class="col col-md-3 col-xs-6">
+                    <a class="btn btn-danger w100" asp-area="@AreaConstants.PanelArea" asp-controller="Home" asp-action="Index"> بازگشت  <i class="fa  fa-angle-double-left"> </i></a>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+<div class="alert alert-info top30" role="alert">
+    <a href="#" class="close" data-dismiss="alert">×</a>
+    <ul>
+        <li>لطفا دقت بفرمائید با تغییر آدرس ایمیل، اکانت شما به صورت موقت غیرفعال شده و یک ایمیل فعالسازی مجدد آن‌را بلافاصله دریافت خواهید کرد.</li>
+        <li>در صورت عدم ورود تصویر، از اطلاعات قبلی استفاده خواهد شد. </li>
+        <li>
+            تصاویر مجاز برای ارسال از نوع‌های png، gif و jpg هستند؛ با حداکثر اندازه @imageOptions.MaxWidth * @imageOptions.MaxHeight
+            پیکسل.
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Styles {
+    <link href="~/css/fileinput.min.css" rel="stylesheet" asp-append-version="true" />
+}
+
+@section Scripts
+    {
+    <script src="~/js/fileinput.min.js" type="text/javascript" asp-append-version="true"></script>
+
+    <script type="text/javascript">
+        function triggerRemoteValidation() {
+            $('#@nameof(UserProfileViewModel.UserName)').removeData('previousValue');
+            $('form').validate().element('#@nameof(UserProfileViewModel.UserName)');
+
+            $('#@nameof(UserProfileViewModel.Email)').removeData('previousValue');
+            $('form').validate().element('#@nameof(UserProfileViewModel.Email)');
+        }
+
+    $(document).on('ready', function () {
+        $("#userphoto").fileinput({
+            rtl: true,
+            theme: "fa",
+            showUpload: false,
+            language:"fa",
+            allowedFileExtensions: ["jpg", "png", "gif"]
+        });
+    });
+    </script>
+
+
+}

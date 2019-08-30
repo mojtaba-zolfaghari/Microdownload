@@ -1,0 +1,123 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>Microdownload</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>Microdownload</PackageId>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Microdownload</RootNamespace>
+  </PropertyGroup>
+
+ 
+  
+  <ItemGroup>
+    <None Update="wwwroot\**\*;Views\**\*;Areas\**\*.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microdownload.Common\Microdownload.Common.csproj" />
+    <ProjectReference Include="..\Microdownload.Entities\Microdownload.Entities.csproj" />
+    <ProjectReference Include="..\Microdownload.IocConfig\Microdownload.IocConfig.csproj" />
+    <ProjectReference Include="..\Microdownload.Services\Microdownload.Services.csproj" />
+    <ProjectReference Include="..\Microdownload.ViewModels\Microdownload.ViewModels.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
+    <PackageReference Include="BundlerMinifier.Core" Version="2.8.391" />
+    <PackageReference Include="DNTBreadCrumb.Core" Version="1.7.1" />
+    <PackageReference Include="DNTCaptcha.Core" Version="1.6.2" />
+    <PackageReference Include="DNTCommon.Web.Core" Version="1.3.2" />
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="NonFactors.Grid.Mvc6" Version="4.0.1" />
+    <PackageReference Include="NToastNotify" Version="5.0.8" />
+    <PackageReference Include="Zarinpal" Version="2.0.5" />
+    <PackageReference Include="ZarinpalSandbox" Version="2.0.4" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <PlatformTarget>anycpu</PlatformTarget>
+  </PropertyGroup>
+  <!--<Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet bundle" />
+  </Target>-->  
+  <ItemGroup>
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="*" />
+
+  </ItemGroup>
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+    <!--<Exec Command="bower install" />-->
+    <Exec Command="dotnet bundle" />
+  </Target>
+
+  <ItemGroup>
+    <!-- extends watching group to include *.js files -->
+    <Watch Include="**\*.js" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*;wwwroot\**\*;src\**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Areas\Identity\**" />
+    <Content Remove="Areas\Identity\**" />
+    <EmbeddedResource Remove="Areas\Identity\**" />
+    <None Remove="Areas\Identity\**" />
+    <Watch Remove="Areas\Identity\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Scripts\custom.js" />
+    <None Remove="Scripts\jquery.bootstrap-modal-ajax-form.js" />
+    <None Remove="Scripts\jquery.bootstrap-modal-alert.js" />
+    <None Remove="Scripts\jquery.bootstrap-modal-confirm.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Watch Remove="Scripts\custom.js" />
+    <Watch Remove="Scripts\jquery.bootstrap-modal-ajax-form.js" />
+    <Watch Remove="Scripts\jquery.bootstrap-modal-alert.js" />
+    <Watch Remove="Scripts\jquery.bootstrap-modal-confirm.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\custom.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.bootstrap-modal-ajax-form.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.bootstrap-modal-alert.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Scripts\jquery.bootstrap-modal-confirm.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Areas\Panel\Views\Wallet\Index.cshtml" />
+    <None Include="Areas\Panel\Views\Wallet\OnlinPayResult.cshtml" />
+    <None Include="Areas\Panel\Views\Wallet\WalletCharge.cshtml" />
+    <None Include="Areas\Panel\Views\Wallet\_AllTWalletList.cshtml" />
+    <None Include="wwwroot\server\Scripts\custom.js" />
+    <None Include="wwwroot\server\Scripts\jquery.bootstrap-modal-ajax-form.js" />
+    <None Include="wwwroot\server\Scripts\jquery.bootstrap-modal-alert.js" />
+    <None Include="wwwroot\server\Scripts\jquery.bootstrap-modal-confirm.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\images\userpic\" />
+    <Folder Include="wwwroot\images\slideshow\" />
+    <Folder Include="wwwroot\Upload\InstituteRequest\" />
+    <Folder Include="wwwroot\Upload\Resume\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Connected Services\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,131 @@
+﻿@model IEnumerable<InstituteViewModel>
+
+@{
+    ViewData["Title"] = "آموزشگاه";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="panel-title">@ViewData["Title"]</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="btn-group pull-right">
+                    <a class="btn btn-success" href="#" id="btnCreateNewInstitute"><i class="fa fancytree-ico-c"> </i> افزودن آموزشگاه جدید</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="panel-body">
+
+        @(Html
+                                                              .Grid(Model)
+                                                              .Build(columns =>
+                                                              {
+                                                                  columns.Add(model => model.InstituteName).Titled("نام آموزشگاه");
+                                                                  columns.Add(model => model.Phone).Titled("تلفن");
+
+                                                                  columns.Add(model =>
+
+     $"<a  href=\"Institute/{model.Id} \" class=\"btn btn-sm btn-primary\" style=\"margin-left:10px\">جزئیات آموزشگاه</a>" +
+
+     $"<a  href=\"#\"  id=\"btnEdit-{model.Id}\" data-edit-id=\"{model.Id}\" class=\"btn btn-sm btn-info\" style=\"margin-left:10px\">ویرایش</a>" +
+
+     $"<a  href=\"#\"  id=\"btnDelete-{model.Id}\" data-Delete-id=\"{model.Id}\"  class=\"btn btn-sm btn-danger\">حذف</a>").Encoded(false);
+
+                                                              })
+                                                                    .Empty("دوره ای یافت نشد")
+                                                                    .Filterable()
+                                                                    .Sortable()
+                                                                    .Pageable(pager =>
+                                                                    {
+                                                                        pager.ProcessorType = GridProcessorType.Manual;
+                                                                        pager.TotalRows = ViewBag.TotalRows;
+                                                                        pager.RowsPerPage = 10;
+                                                                    })
+        )
+
+
+    </div>
+
+
+
+    <div class="panel-footer">
+        تعداد کل دوره ها : @Model.Count()
+    </div>
+
+
+</div>
+
+
+
+@section Scripts
+    {
+    <script src="~/server/assets/js/core/MvcGrid.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btnCreateNewInstitute').click(function (e) {
+                e.preventDefault();
+
+                $.bootstrapModalAjaxForm({
+
+                    postUrl: '@Url.Action("AddEditInstitute", "Institute")',
+                    renderModalPartialViewUrl: '@Url.Action("RenderInstitute", "Institute")',
+                    renderModalPartialViewData: {},
+                    loginUrl: '/Panel/login',
+                    beforePostHandler: function () {
+                    },
+                    completeHandler: function () {
+                        location.reload();
+                    },
+                    errorHandler: function () {
+                    }
+                });
+            });
+
+            $("a[id^='btnEdit']").click(function (e) {
+                e.preventDefault();
+                var slideId = $(this).data("edit-id");
+
+                $.bootstrapModalAjaxForm({
+                    postUrl: '@Url.Action("AddEditInstitute", "Courses")',
+                    renderModalPartialViewUrl: '@Url.Action("RenderCourse", "Courses")',
+                    renderModalPartialViewData: JSON.stringify({ "id": slideId }),
+                    loginUrl: '/Panel/login',
+                    beforePostHandler: function () {
+                    },
+                    completeHandler: function () {
+                        location.reload();
+                    },
+                    errorHandler: function () {
+                    }
+                });
+            });
+
+            $("a[id^='btnDelete']").click(function (e) {
+                e.preventDefault();
+                var slideId = $(this).data("delete-id");
+
+                $.bootstrapModalAjaxForm({
+                    postUrl: '@Url.Action("DeleteInstitute", "Institute")',
+                    renderModalPartialViewUrl: '@Url.Action("RenderDeleteInstitute", "Institute")',
+                    renderModalPartialViewData: JSON.stringify({ "id": slideId }),
+                    loginUrl: '/Panel/login',
+                    beforePostHandler: function () {
+                    },
+                    completeHandler: function () {
+                        location.reload();
+                    },
+                    errorHandler: function () {
+                    }
+                });
+            });
+        });
+
+
+    </script>
+
+}

@@ -1,0 +1,118 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <li>
+        <a href="#"><i class="icon-coins"></i> <span>مدیریت </span></a>
+        <ul>
+            <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Courses" asp-action="Index">
+                <li>
+                    <a asp-controller="Courses" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                        <i class="icon-coin-dollar"></i> <span>دوره ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Institute" asp-action="Teacherrequest" asp-area="@AreaConstants.PanelArea">
+                        <i class="icon-coin-dollar"></i> <span>درخواست های مربی گری</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a asp-controller="Institute" asp-action="Instituterequest" asp-area="@AreaConstants.PanelArea">
+                        <i class="icon-coin-dollar"></i> <span>درخواست های ثبت نمایندگی</span>
+                    </a>
+                </li>
+            </security-trimming>
+
+
+        </ul>
+    </li>
+
+
+
+
+
+
+    <li>
+        <a href="#"><i class="icon-coins"></i> <span>مدیریت دوره ها</span></a>
+        <ul>
+            <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Courses" asp-action="Index">
+                <li>
+                    <a asp-controller="Courses" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                        <i class="icon-coin-dollar"></i> <span>دوره ها</span>
+                    </a>
+                </li>
+            </security-trimming>
+
+
+        </ul>
+    </li>
+
+    <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Institute" asp-action="Index">
+
+        <li>
+            <a href="#"><i class="icon-user-check"></i> <span>آموزشگاه ها</span></a>
+            <ul>
+                <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Institute" asp-action="Teacher">
+                    <li>
+                        <a asp-controller="Institute" asp-action="Teacher" asp-area="@AreaConstants.PanelArea">
+                            <i class="icon-coin-dollar"></i> <span>مدیریت مربی ها</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-controller="Institute" asp-action="Teacherrequest" asp-area="@AreaConstants.PanelArea">
+                            <i class="icon-coin-dollar"></i> <span>درخواست های مربی گری</span>
+                        </a>
+                    </li>
+                </security-trimming>
+
+            </ul>
+        </li>
+    </security-trimming>
+
+
+
+
+    <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Institute" asp-action="Index">
+
+        <li>
+            <a href="#"><i class="icon-user-check"></i> <span>مدیریت کابری</span></a>
+            <ul>
+                <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Institute" asp-action="CreateTeacherRequest">
+                    <li>
+                        <a asp-controller="Institute" asp-action="CreateTeacherRequest" asp-area="@AreaConstants.PanelArea">
+                            <i class="icon-coin-dollar"></i> <span>درخواست مربی گری</span>
+                        </a>
+                    </li>
+                </security-trimming>
+
+                <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Courses" asp-action="Index">
+                    <li>
+                        <a asp-controller="Courses" asp-action="Index" asp-area="@AreaConstants.PanelArea">
+                            <i class="icon-coin-dollar"></i> <span>لیست دوره های من</span>
+                        </a>
+                    </li>
+                </security-trimming>
+
+                <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="Institute" asp-action="CreateInstituteRequest">
+                    <li>
+                        <a asp-controller="Institute" asp-action="CreateInstituteRequest" asp-area="@AreaConstants.PanelArea">
+                            <i class="icon-coin-dollar"></i> <span>ثبت آموزشگاه\نمایندگی</span>
+                        </a>
+                    </li>
+                </security-trimming>
+
+            </ul>
+
+
+        </li>
+    </security-trimming>
+
+    <security-trimming asp-area="@AreaConstants.PanelArea" asp-controller="AboutUsManagement" asp-action="Index">
+
+        <li>
+            <a href="#"><i class="icon-camera"></i> <span>مدیریت سایت</span></a>
+            <ul></ul>
+        </li>
+    </security-trimming>
+
+}

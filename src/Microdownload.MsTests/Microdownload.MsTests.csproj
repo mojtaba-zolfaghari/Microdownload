@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Microdownload.MsTests</AssemblyName>
+    <PackageId>Microdownload.MsTests</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="..\Microdownload\appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microdownload.DataLayer\Microdownload.DataLayer.csproj" />
+    <ProjectReference Include="..\Microdownload.Entities\Microdownload.Entities.csproj" />
+    <ProjectReference Include="..\Microdownload.IocConfig\Microdownload.IocConfig.csproj" />
+    <ProjectReference Include="..\Microdownload.Services\Microdownload.Services.csproj" />
+    <ProjectReference Include="..\Microdownload.ViewModels\Microdownload.ViewModels.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DNTCommon.Web.Core" Version="1.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+</Project>

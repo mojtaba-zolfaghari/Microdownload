@@ -1,0 +1,28 @@
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.ViewModels.deps.json
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.ViewModels.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.ViewModels.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Entities.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.csprojAssemblyReference.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.csproj.CopyComplete
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.ViewModels.deps.json
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.ViewModels.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.ViewModels.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Entities.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\bin\Release\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.csprojAssemblyReference.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.csproj.CoreCompileInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.AssemblyInfoInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.AssemblyInfo.cs
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.csproj.CopyComplete
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.ViewModels\obj\Release\netstandard2.0\MellatIns.ViewModels.pdb

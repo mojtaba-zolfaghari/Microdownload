@@ -1,0 +1,74 @@
+﻿@model TeacherViewModel
+@{List<User> _ListUser = (List<User>)ViewData["ListUser"]; }
+@{List<InstituteViewModel> _listInstitute = (List<InstituteViewModel>)ViewData["ListInstitute"]; }
+
+<script type="text/javascript">
+
+    $('.dselect2').select2();
+    $('#Amount').number(true, 0);
+
+</script>
+
+
+<partial name="_CustomValidationSummary" />
+<form asp-action="AddEditTeacher" method="post" class="form-horizontal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                @if (string.IsNullOrEmpty(Model?.Id.ToString()))
+                {
+                    <h4 class="modal-title">افزودن مدرس جدید</h4>
+                }
+                else
+                {
+                    <h4 class="modal-title">ویرایش مدرس</h4>
+                }
+            </div>
+            <div class="modal-body">
+
+                <input asp-for="Id" hidden="hidden" />
+
+
+                <div class="form-group">
+                    <label asp-for="InstituteTeacherIdes" class="col col-lg-3 control-label"></label>
+                    <div class="col col-lg-9 controls">
+                        <select asp-for="InstituteTeacherIdes" class="form-control dselect2 multiselect" style="width:100%">
+                            @{
+                                foreach (var item in _listInstitute)
+                                {
+                                    <option value="@item.Id">@item.InstituteName</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="InstituteTeacherIdes" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="UserId" class="col col-lg-3 control-label"></label>
+                    <div class="col col-lg-9 controls">
+                        <select asp-for="UserId" class="form-control dselect2" style="width:100%">
+                            <option value="" disabled selected hidden>انتخاب کنید</option>
+                            @{
+                                foreach (var item in _ListUser)
+                                {
+                                    <option value="@item.Id">@item.DisplayName</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="UserId" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit">ثبت</button>
+                <button class="btn" data-dismiss="modal" aria-hidden="true">انصراف</button>
+            </div>
+        </div>
+    </div>
+</form>

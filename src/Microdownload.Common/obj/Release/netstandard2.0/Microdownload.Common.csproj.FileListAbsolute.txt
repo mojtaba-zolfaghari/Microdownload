@@ -1,0 +1,9 @@
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\bin\Release\netstandard2.0\Microdownload.Common.deps.json
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\bin\Release\netstandard2.0\Microdownload.Common.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\bin\Release\netstandard2.0\Microdownload.Common.pdb
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\obj\Release\netstandard2.0\Microdownload.Common.csprojAssemblyReference.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\obj\Release\netstandard2.0\Microdownload.Common.csproj.CoreCompileInputs.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\obj\Release\netstandard2.0\Microdownload.Common.AssemblyInfoInputs.cache
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\obj\Release\netstandard2.0\Microdownload.Common.AssemblyInfo.cs
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\obj\Release\netstandard2.0\Microdownload.Common.dll
+D:\Projects\Milad\Solution\Microdownload\src\Microdownload.Common\obj\Release\netstandard2.0\Microdownload.Common.pdb

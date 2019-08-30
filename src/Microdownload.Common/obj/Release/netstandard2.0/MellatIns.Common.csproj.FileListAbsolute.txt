@@ -1,0 +1,18 @@
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\bin\Release\netstandard2.0\MellatIns.Common.deps.json
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\bin\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\bin\Release\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.csprojAssemblyReference.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\bin\Release\netstandard2.0\MellatIns.Common.deps.json
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\bin\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\bin\Release\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.csprojAssemblyReference.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.csproj.CoreCompileInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.AssemblyInfoInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.AssemblyInfo.cs
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Common\obj\Release\netstandard2.0\MellatIns.Common.pdb

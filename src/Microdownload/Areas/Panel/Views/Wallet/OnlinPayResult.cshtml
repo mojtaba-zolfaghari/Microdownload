@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "نتیجه پرداخت آنلاین";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">@ViewData["Title"]</h3>
+    </div>
+    <div class="panel-body">
+        <div align="center">
+            <img src="@ViewBag.Imageurl" class="img-responsive  animated bounce" alt="@ViewData["Title"]" />
+        </div>
+        @{
+            if (ViewBag.showlogin == true)
+            {
+                <div class="alert alert-info">
+                    <a href="#" class="close" data-dismiss="alert">×</a>
+                    <ul>
+                        <li>
+                            با توجه به این که سطح دسترسی شما در سیستم سیستم نمایندگان بیمه ملت تغییر کرده است شما می بایست مجدد وارد سیستم شوید !
+                        </li>
+                    </ul>
+                    <div align="center">
+                        <span>لطفا جهت ورود به سیستم <a asp-controller="Login" asp-action="Index" class="redcolor">اینجا</a> کلیک کنید.</span>
+                    </div>
+                </div>
+            }
+        }
+        <table id="PayResult" class="table table-striped table-hover table-bordered table-condensed">
+            <tr>
+                <th class="text-center">پیام درگاه</th>
+                <th class="text-center">کد پیگیری</th>
+            </tr>
+            <tr>
+                <td class="text-center">@ViewBag.Message</td>
+                <td class="text-center">@ViewBag.SaleReferenceId</td>
+            </tr>
+        </table>
+    </div>
+</div>
+

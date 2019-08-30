@@ -1,0 +1,48 @@
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.deps.json
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csprojAssemblyReference.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CopyComplete
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\Miladsoft Pro\MrMoradi\123M\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.pdb
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.deps.json
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.pdb
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.dll
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.pdb
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csprojAssemblyReference.cache
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfoInputs.cache
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfo.cs
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CopyComplete
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Projects\Milad\Mellatgns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.deps.json
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.pdb
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csprojAssemblyReference.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CoreCompileInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfoInputs.cache
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfo.cs
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CopyComplete
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Programming\GitHub\MellatIns\Mellatins\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.pdb
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.deps.json
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Entities.pdb
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.dll
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\bin\Debug\netstandard2.0\MellatIns.Common.pdb
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csprojAssemblyReference.cache
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfoInputs.cache
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.AssemblyInfo.cs
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.csproj.CopyComplete
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.dll
+D:\Projects\Milad\Solution\Mellatns\Clone\src\MellatIns.Entities\obj\Debug\netstandard2.0\MellatIns.Entities.pdb

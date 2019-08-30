@@ -1,0 +1,24 @@
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.deps.json
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Common.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Common.pdb
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.AssemblyInfoInputs.cache
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.AssemblyInfo.cs
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csproj.CopyComplete
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.dll
+C:\Users\Miladsoft\Desktop\DNTIdentity-master\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.deps.json
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Common.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Common.pdb
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csprojAssemblyReference.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csproj.CopyComplete
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.dll
+D:\Programming\Miladsoft Pro\MrAkbari\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.pdb

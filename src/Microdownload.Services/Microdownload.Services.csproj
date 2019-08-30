@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Microdownload.Services</AssemblyName>
+    <PackageId>Microdownload.Services</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microdownload.Common\Microdownload.Common.csproj" />
+    <ProjectReference Include="..\Microdownload.DataLayer\Microdownload.DataLayer.csproj" />
+    <ProjectReference Include="..\Microdownload.Entities\Microdownload.Entities.csproj" />
+    <ProjectReference Include="..\Microdownload.ViewModels\Microdownload.ViewModels.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
+    <PackageReference Include="DNTCommon.Web.Core" Version="1.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.0" />
+  </ItemGroup>
+</Project>

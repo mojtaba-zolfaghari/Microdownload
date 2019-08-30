@@ -1,0 +1,12 @@
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.deps.json
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Entities.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Common.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\bin\Debug\netstandard2.0\Katebb.Common.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csprojResolveAssemblyReference.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csproj.CoreCompileInputs.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.AssemblyInfoInputs.cache
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.AssemblyInfo.cs
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.dll
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.pdb
+D:\Programming\Miladsoft Pro\Katebb\src\Katebb.Entities\obj\Debug\netstandard2.0\Katebb.Entities.csproj.CopyComplete

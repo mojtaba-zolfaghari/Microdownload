@@ -1,0 +1,81 @@
+﻿@model InstituteRequestViewModel
+@{
+    ViewData["Title"] = "ثبت درخواست تدریس";
+}
+<div class="panel panel-default top30 col-md-6 col-md-push-3">
+
+    <div class=" panel-heading">
+        @ViewData["Title"]
+    </div>
+    <div class="panel-body">
+
+
+        <form asp-controller="Institute"
+              asp-action="CreateInstituteRequest"
+              method="post"
+              enctype="multipart/form-data"
+              class="form-horizontal top30">
+            @{ await Html.RenderPartialAsync("_CustomValidationSummary").ConfigureAwait(false); }
+
+
+            <div class="form-group">
+                <label asp-for="RequestedCourse" class="col-md-3 control-label Bold"></label>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <textarea dir="rtl" placeholder="دوره 1 - دوره 2- دوره 3" asp-for="RequestedCourse" class="form-control width-500"></textarea>
+                    </div>
+                    <span asp-validation-for="RequestedCourse" class="text-danger"></span>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="RegisterdFile" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input type="file" name="ResumeUrlFile" value="" />
+                    <input asp-for="RegisterdFile" class="form-control disabled text-left hidden" value="ImageUrlFile" />
+                    <span asp-validation-for="RegisterdFile" class="text-danger"></span>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="form-group">
+                <label class="col col-md-3 control-label">
+                    کد امنیتی
+                </label>
+                <div class="controls col col-md-9">
+                    <dnt-captcha asp-captcha-generator-max="320"
+                                 asp-captcha-generator-min="100"
+                                 asp-captcha-generator-language="Persian"
+                                 asp-font-name="Tahoma"
+                                 asp-font-size="20"
+                                 asp-fore-color="#333333"
+                                 asp-back-color="#ccc"
+                                 asp-text-box-class="text-box single-line form-control"
+                                 asp-text-box-template="<div class='input-group'><span class='input-group-addon'><span class='glyphicon glyphicon-lock'></span></span>{0}</div>"
+                                 asp-validation-message-class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-6">
+                    <button type="submit" class="btn btn-info col-md-6  animated flash">ثبت اطلاعات</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+
+    </script>
+}

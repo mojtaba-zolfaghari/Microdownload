@@ -1,0 +1,35 @@
+﻿@inject IUsersPhotoService PhotoService
+@{
+    var displayName = User.Identity.GetUserDisplayName();
+    var UserName = User.Identity.GetUserName();
+    var photoUrl = PhotoService.GetCurrentUserPhotoUrl();
+}
+
+<div class="sidebar-user">
+    <div class="category-content">
+        <div class="media">
+
+            <div class="media-left">
+                <img class="img-circle img-lg60" src="@photoUrl" alt="@displayName" asp-append-version="true"
+                     onerror="this.style.visibility = 'hidden';"/>
+            </div>
+                <div class="media-body">
+                    <span class="media-heading text-semibold">
+                        @displayName
+                    </span>
+                    <div class="text-size-mini text-muted">
+                        <i class="icon-pin text-size-small"></i> &nbsp;@UserName
+            </div>
+        </div>
+        <div class="media-right media-middle">
+            <ul class="icons-list">
+                <li>
+                    <a asp-controller="UserCard" asp-action="Index" asp-area="@AreaConstants.PanelArea"><i class="icon-cog3"></i></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</div>
+
+

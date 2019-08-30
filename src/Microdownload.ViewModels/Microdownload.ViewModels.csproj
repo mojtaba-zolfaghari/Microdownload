@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Microdownload.ViewModels</AssemblyName>
+    <PackageId>Microdownload.ViewModels</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DNTCommon.Web.Core" Version="1.2.0" />
+    <PackageReference Include="cloudscribe.Web.Pagination" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microdownload.Entities\Microdownload.Entities.csproj" />
+  </ItemGroup>
+</Project>
